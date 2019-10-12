@@ -99,7 +99,7 @@ button {
 
 .card-number01:hover {
   -webkit-transform: scale(1.003, 1.003);
-  transform: scale(1.003, 1.003);
+  transform: scale(1, 1);
 }
 
 .card-number01:hover::after {
