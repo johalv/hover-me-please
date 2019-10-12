@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "-apple-system", "BlinkMacSystemFont", "San Francisco",
+    "Helvetica Neue", "Helvetica", "Ubuntu", "Roboto", "Noto", "Segoe UI",
+    "Arial", sans-serif;
+  line-height: 1.615;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+header {
+  position: relative;
+  top: 0;
+  box-shadow: 0 -3px 7px 1px rgba(49, 49, 49, 0.56);
+  padding: 50px;
+  margin-bottom: 40px;
+}
+
+section {
+  margin: 0 auto;
+  width: 340px;
+}
+
+img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+p {
+  color: black;
+}
+
+/**
+ * Reset button styles.
+ * It takes a bit of work to achieve a neutral look.
+ */
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  /* show a hand cursor on hover; some argue that we
+  should keep the default arrow cursor for buttons */
+  cursor: pointer;
+}
+
+#wrappTheApp {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  height: 100vh;
+  max-width: 100vw;
+  grid-gap: 10px;
+}
+
+.inlineLink {
+  display: block;
+  padding: 16px 0 13px 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.inlineLink a {
+  padding: 3px 0;
+  border-bottom: 2px solid transparent;
+}
+
+/* –––––––number01––––––– */
+
+.card-number01 {
+  position: unset;
+  border-radius: 5px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12);
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card-number01::after {
+  content: "";
+  border-radius: 5px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card-number01:hover {
+  -webkit-transform: scale(1.003, 1.003);
+  transform: scale(1.003, 1.003);
+}
+
+.card-number01:hover::after {
+  opacity: 1;
+}
+
+.cardInner-number01,
+.cardHeader-number01 {
+  padding: 5px 20px;
+}
+
+.card-number01:hover .inlineLink a {
+  border-bottom: 2px solid grey;
+}
+
+.cardInner-number01 {
+  padding-bottom: 20px;
+}
+
+/* ––––––– */
+
+/* –––––––number02––––––– */
+
+.card-number02 {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12);
+  width: 100%;
+  border-radius: 5px;
+}
+
+.cardInner-number02,
+.cardHeader-number02 {
+  padding: 5px 20px;
+}
+
+.card-number02:hover {
+  box-shadow: -5px 5px 0px 0 rgb(0, 0, 0);
+  transform: translate(5px, -5px);
+}
+
+.card-number02:hover .inlineLink a {
+  border-bottom: 2px solid grey;
+}
+
+.cardInner-number02 {
+  padding-bottom: 20px;
+  z-index: 1;
+}
+
+.flippedBox {
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  transform: rotate(0deg) scaleX(1);
+  display: none;
+  height: 0.7rem;
+  width: 0.7rem;
+  z-index: -99;
+}
+
+.card-number02:hover .flippedBox {
+  background: #000;
+  transform: rotate(-45deg) scaleX(1);
+  display: block;
+  height: 0.7rem;
+  width: 0.7rem;
+}
+
+.flippedTopLeft {
+  margin-left: 2.3px;
+  margin-top: -3px;
+  border-radius: 4px;
+  margin-left: -4px;
+  margin-top: 3.3px;
+}
+
+.flippedBotRight {
+  margin-left: 2.3px;
+  margin-top: -3px;
+  border-radius: 3px;
+  right: 0;
+  top: 100%;
+  z-index: -99;
+}
+.card-number02-absolute-inner {
+
+}
+
+.arrow-left {
+  position: absolute;
+  right: 2%;
+  top: 99.1%;
+  z-index: -99;
+  transform: rotate(45deg);
+  width: 0; 
+  height: 0; 
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent; 
+  border-right:3px solid rgb(0, 0, 0); 
+}
+
